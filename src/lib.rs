@@ -157,12 +157,6 @@ where
     
 {
     async fn call(&self, cx: &mut Cx, req: Req) -> Result<S::Response, S::Error> {
-        // let now = std::time::Instant::now();
-        // tracing::debug!("Received request {:?}", &req);
-        // let resp = self.0.call(cx, req).await;
-        // tracing::debug!("Sent response {:?}", &resp);
-        // tracing::info!("Request took {}ms", now.elapsed().as_millis());
-        // resp
 
         let info = format!("{:?}", req);
 		if info.contains("shabi") {
